@@ -37,7 +37,7 @@ const FruitThumb = ({ details }) => {
   const image = determineImage(details.name);
 
   return (
-    <article>
+    <article className="thumb-article">
       <img src={image} alt={details.name} />
       <p>{details.name}</p>
     </article>
