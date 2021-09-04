@@ -1,7 +1,8 @@
 const fetchFruitInformation = async () => {
   const baseUrl = "https://www.fruityvice.com/api/fruit";
 
-  const response = await fetch(baseUrl);
+  // all for HomePage view, id/name for FruitView
+  const response = await fetch(`${baseUrl}/all`);
 
   if (!response.ok) {
     throw new Error(response.statusText);
@@ -9,3 +10,4 @@ const fetchFruitInformation = async () => {
 
   return response.json();
 };
+
