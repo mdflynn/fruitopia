@@ -1,7 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "./HomePage.scss";
+
+import fetchFruitInformation from "../../apiCalls";
+
+import FruitThumb from "../FruitThumb/FruitThumb";
 
 const HomePage = () => {
-    return <h1>HomePage</h1>
-}
+  const [fruits, setFruits] = useState([]);
 
-export default HomePage
+  useEffect(() => {
+    fetchFruitInformation().then((data) => setFruits(data));
+  }, []);
+
+  const generateFruitThumbs = () => {
+    return fruits.map((fruit) => <FruitThumb key={fruit.id} details={fruit} />);
+  };
+
+  return (
+    <section className="home-section">
+      {fruits.length && generateFruitThumbs()}
+    </section>
+  );
+};
+
+export default HomePage;
