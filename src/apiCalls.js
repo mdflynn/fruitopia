@@ -1,7 +1,10 @@
 const fetchFruitInformation = async () => {
-  const baseUrl = "https://www.fruityvice.com/api/fruit";
 
-  const response = await fetch("https://www.fruityvice.com/api/fruit/all");
+  const corsProxy = "https://evening-lake-85504.herokuapp.com/"
+  const baseUrl = "https://www.fruityvice.com/api/fruit"
+
+  const response = await fetch(`${corsProxy}${baseUrl}/all`);
+
   if (!response.ok) {
     throw new Error(response.statusText);
   }
