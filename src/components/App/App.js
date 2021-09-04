@@ -1,7 +1,11 @@
-import './App.scss';
+import React from "react";
+import "./App.scss";
+
+import { Route, Switch } from "react-router-dom";
+import Nav from "../Nav/Nav";
 
 const App = () => {
-  return <h1>Fruitopia</h1>
-}
+  return <Nav />
+};
 
 export default App;
