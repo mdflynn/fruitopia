@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "./HomePage.scss";
+
+import fetchFruitInformation from "../../apiCalls";
 
 const HomePage = () => {
-    return <h1>HomePage</h1>
-}
+  const [fruits, setFruits] = useState([]);
 
-export default HomePage
+  useEffect(() => {
+    fetchFruitInformation().then((data) => console.log(data));
+  }, []);
+  return <h1>HomePage</h1>;
+};
+
+export default HomePage;
