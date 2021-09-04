@@ -3,13 +3,20 @@ import "./HomePage.scss";
 
 import fetchFruitInformation from "../../apiCalls";
 
+import FruitThumb from "../FruitThumb/FruitThumb";
+
 const HomePage = () => {
   const [fruits, setFruits] = useState([]);
 
   useEffect(() => {
     fetchFruitInformation().then((data) => setFruits(data));
   }, []);
-  return <h1>HomePage</h1>;
+
+  const generateFruitThumbs = () => {
+    return fruits.map((fruit) => <FruitThumb key={fruit.id} details={fruit} />);
+  };
+
+  return <section>{fruits.length && generateFruitThumbs()}</section>;
 };
 
 export default HomePage;
