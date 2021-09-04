@@ -7,7 +7,7 @@ const HomePage = () => {
   const [fruits, setFruits] = useState([]);
 
   useEffect(() => {
-    fetchFruitInformation().then((data) => console.log(data));
+    fetchFruitInformation().then((data) => setFruits(data));
   }, []);
   return <h1>HomePage</h1>;
 };
