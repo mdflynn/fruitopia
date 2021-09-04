@@ -16,7 +16,11 @@ const HomePage = () => {
     return fruits.map((fruit) => <FruitThumb key={fruit.id} details={fruit} />);
   };
 
-  return <section>{fruits.length && generateFruitThumbs()}</section>;
+  return (
+    <section className="home-section">
+      {fruits.length && generateFruitThumbs()}
+    </section>
+  );
 };
 
 export default HomePage;
