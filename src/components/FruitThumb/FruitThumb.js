@@ -12,34 +12,40 @@ import persimmon from "../../assets/persimmon.jpg";
 const FruitThumb = ({ details, selectFruit }) => {
   const determineImage = (fruitName) => {
     const name = fruitName.toLowerCase();
-    const thumbImg = `https://passport-media.s3-us-west-1.amazonaws.com/images/eng-intern-interview/${name}.png`;
+    const imgUrl = `https://passport-media.s3-us-west-1.amazonaws.com/images/eng-intern-interview/${name}.png`;
+
+    let thumbImg;
 
     switch (name) {
       case "grapes":
-        return grape;
+        thumbImg = grape;
         break;
       case "lime":
-        return lime;
+        thumbImg = lime;
         break;
       case "melon":
-        return melon;
+        thumbImg = melon;
         break;
       case "papaya":
-        return papaya;
+        thumbImg = papaya;
         break;
       case "persimmon":
-        return persimmon;
+        thumbImg = persimmon;
         break;
       default:
-        return thumbImg;
+        thumbImg = imgUrl;
     }
+    return thumbImg;
   };
 
   const image = determineImage(details.name);
 
   return (
     <Link to={`fruit/${details.id}`}>
-      <article className="thumb-article" onClick={() => selectFruit(details)}>
+      <article
+        className="thumb-article"
+        onClick={() => selectFruit({ ...details, image })}
+      >
         <img src={image} alt={details.name} />
         <p>{details.name}</p>
       </article>
