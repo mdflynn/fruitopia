@@ -1,49 +1,60 @@
 import React from "react";
 import "./FruitThumb.scss";
 
+import { Link } from "react-router-dom";
+
 import grape from "../../assets/grape.jpg";
 import lime from "../../assets/lime.jpg";
 import melon from "../../assets/melon.jpg";
 import papaya from "../../assets/papaya.jpg";
 import persimmon from "../../assets/persimmon.jpg";
+import durian from "../../assets/durian.jpg";
 
-const FruitThumb = ({ details }) => {
-    
+const FruitThumb = ({ details, selectFruit }) => {
   const determineImage = (fruitName) => {
     const name = fruitName.toLowerCase();
-    const thumbImg = `https://passport-media.s3-us-west-1.amazonaws.com/images/eng-intern-interview/${name}.png`;
-   
+    const imgUrl = `https://passport-media.s3-us-west-1.amazonaws.com/images/eng-intern-interview/${name}.png`;
+
+    let thumbImg;
+
     switch (name) {
       case "grapes":
-        return grape;
+        thumbImg = grape;
         break;
       case "lime":
-        return lime;
+        thumbImg = lime;
         break;
       case "melon":
-        return melon;
+        thumbImg = melon;
         break;
       case "papaya":
-        return papaya;
+        thumbImg = papaya;
         break;
       case "persimmon":
-        return persimmon;
+        thumbImg = persimmon;
+        break;
+      case "durian":
+        thumbImg = durian;
         break;
       default:
-        return thumbImg;
+        thumbImg = imgUrl;
     }
+    return thumbImg;
   };
 
   const image = determineImage(details.name);
 
   return (
-    <article className="thumb-article">
-      <img src={image} alt={details.name} />
-      <p>{details.name}</p>
-    </article>
+    <Link to={`fruit/${details.id}`}>
+      <article
+        className="thumb-article"
+        onClick={() => selectFruit({ ...details, image })}
+      >
+        <img src={image} alt={details.name} />
+        <p>{details.name}</p>
+      </article>
+    </Link>
   );
 };
 
 export default FruitThumb;
-// image issues for:
-// grape, lime, persimmon, papaya, melon
