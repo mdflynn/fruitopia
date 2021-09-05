@@ -13,6 +13,15 @@ const FruitPage = ({ fruitDetails }) => {
           <p>{fruitDetails.order}</p>
           <p>{fruitDetails.family}</p>
         </div>
+        <div className="nutrition-details">
+          <ul>
+            <li>{fruitDetails.nutritions.carbohydrates}</li>
+            <li>{fruitDetails.nutritions.protein}</li>
+            <li>{fruitDetails.nutritions.fat}</li>
+            <li>{fruitDetails.nutritions.calories}</li>
+            <li>{fruitDetails.nutritions.sugar}</li>
+          </ul>
+        </div>
       </div>
     </section>
   );
