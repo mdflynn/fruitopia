@@ -5,7 +5,7 @@ import fetchFruitInformation from "../../apiCalls";
 
 import FruitThumb from "../FruitThumb/FruitThumb";
 
-const HomePage = () => {
+const HomePage = ({ selectFruit }) => {
   const [fruits, setFruits] = useState([]);
 
   useEffect(() => {
@@ -13,12 +13,14 @@ const HomePage = () => {
   }, []);
 
   const generateFruitThumbs = () => {
-    return fruits.map((fruit) => <FruitThumb key={fruit.id} details={fruit} />);
+    return fruits.map((fruit) => (
+      <FruitThumb key={fruit.id} details={fruit} selectFruit={selectFruit} />
+    ));
   };
 
   return (
     <section className="home-section">
-      {fruits.length && generateFruitThumbs()}
+      {fruits.length > 0 && generateFruitThumbs()}
     </section>
   );
 };

@@ -9,7 +9,7 @@ import melon from "../../assets/melon.jpg";
 import papaya from "../../assets/papaya.jpg";
 import persimmon from "../../assets/persimmon.jpg";
 
-const FruitThumb = ({ details }) => {
+const FruitThumb = ({ details, selectFruit }) => {
   const determineImage = (fruitName) => {
     const name = fruitName.toLowerCase();
     const thumbImg = `https://passport-media.s3-us-west-1.amazonaws.com/images/eng-intern-interview/${name}.png`;
@@ -39,7 +39,7 @@ const FruitThumb = ({ details }) => {
 
   return (
     <Link to={`fruit/${details.id}`}>
-      <article className="thumb-article">
+      <article className="thumb-article" onClick={() => selectFruit(details)}>
         <img src={image} alt={details.name} />
         <p>{details.name}</p>
       </article>
