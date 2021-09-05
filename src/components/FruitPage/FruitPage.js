@@ -4,7 +4,7 @@ import "./FruitPage.scss";
 const FruitPage = ({ fruitDetails }) => {
   return (
     <section className="fruit-section">
-      <img src={fruitDetails.image} />
+      <img src={fruitDetails.image} alt={fruitDetails.name} />
       <div className="fruit-details">
         <div className="fruit-info">
           <p>Name: {fruitDetails.name}</p>

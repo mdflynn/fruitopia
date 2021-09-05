@@ -8,6 +8,7 @@ import lime from "../../assets/lime.jpg";
 import melon from "../../assets/melon.jpg";
 import papaya from "../../assets/papaya.jpg";
 import persimmon from "../../assets/persimmon.jpg";
+import durian from "../../assets/durian.jpg";
 
 const FruitThumb = ({ details, selectFruit }) => {
   const determineImage = (fruitName) => {
@@ -31,6 +32,9 @@ const FruitThumb = ({ details, selectFruit }) => {
         break;
       case "persimmon":
         thumbImg = persimmon;
+        break;
+      case "durian":
+        thumbImg = durian;
         break;
       default:
         thumbImg = imgUrl;
