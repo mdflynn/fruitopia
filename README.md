@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Fruitopia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+An app to see different fruits and find out more information about them!
 
-### `npm start`
+Check it out on [Heroku]()!...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Goals
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Deployed application
+- Modern styling with well-organized CSS
+- Well organized file structure
+- Descriptive naming conventions
+- DRY code that is readable and production ready
+- Reusable components
+- Full Git history with atomic commits
 
-### `npm test`
+<details>
+  <summary>Set up</summary>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Clone the repository down and cd into the repo on your local machine.
+- Install the library dependencies by running:
+  - `npm install`
+- To verify that it is setup correctly, run `npm start` in your terminal.
+- Go to `http://localhost:3000/` and the site should display and have functionality.
+- Enter `control + c` in your terminal to stop the server at any time.
+</details>
 
-### `npm run build`
+## Technologies and Tools
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> - React
+> - JavaScript
+> - JSX
+> - HTML
+> - SCSS
+> - React Testing Library
+> - git
+> - GitHub
+> - REST Api
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Wins
+* Succesfully built and deployed the app!
+## Challenges
+#### CORS
+Right away I ran into a CORS issue when trying to bring in fetch data to the app. I tried a few routes using different headers but was unable to successfully get around the error initially. I ended up referencing this [article](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe) which led me to creating a CORS proxy server to make the requests through. This worked great and allowed me to continue building the app. 
+## Site Design
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Home Page
 
-### `npm run eject`
+<img width="1400" alt="home page" src="https://i.imgur.com/9P5EJq7.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Fruit Page
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="1400" alt="main page" src="https://i.imgur.com/7KI4iPR.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Site Use
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img width="1400" alt="site navigation" src="https://media.giphy.com/media/vzwFjERpLFNVpv34ET/giphy.gif?cid=790b7611492c4a1ce1f0450e1965a0dbb0a2529beda612bc&rid=giphy.gif&ct=g">
 
-## Learn More
+#### Contributors:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Mike Flynn](https://github.com/mdflynn)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="https://avatars1.githubusercontent.com/u/64620860?s=460&u=22fbddd0d55029892d0c73c4b37808a36d5aa1bd&v=4" alt="Mike Flynn"
+ width="150" height="auto" />
