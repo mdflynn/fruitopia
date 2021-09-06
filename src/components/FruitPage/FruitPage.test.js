@@ -31,4 +31,12 @@ beforeEach(() => {
   );
 });
 
+describe("<FruitPage />", () => {
+  it("should render properly", () => {
+    const lemon = screen.getByText("Name: Lemon");
 
+    expect(lemon).toBeInTheDocument();
+  });
+
+
+});
