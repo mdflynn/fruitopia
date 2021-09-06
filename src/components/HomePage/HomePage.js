@@ -20,6 +20,8 @@ const HomePage = ({ selectFruit }) => {
 
   return (
     <section className="home-section">
+      {" "}
+      {fruits.length === 0 && <h1>...Loading</h1>}
       {fruits.length > 0 && generateFruitThumbs()}
     </section>
   );
