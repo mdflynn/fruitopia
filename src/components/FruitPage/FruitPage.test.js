@@ -56,13 +56,13 @@ describe("<FruitPage />", () => {
     expect(order).toBeInTheDocument();
   });
 
-  it("should have an image", () => {
+  it("should have an Image", () => {
     const image = screen.getByRole("img", { name: /lemon/i });
 
     expect(image).toBeInTheDocument();
   });
 
-  it("should have macronutrients", () => {
+  it("should have Macronutrients", () => {
     const macros = screen.getByText('Macronutrients')
     const carbs = screen.getByText("Carbohydrates: 9")
     const protein = screen.getByText("Protein: 1.1")
