@@ -56,4 +56,21 @@ describe("<HomePage />", () => {
     expect(lemon).toBeInTheDocument();
     expect(apple).toBeInTheDocument();
   });
+
+  it("should have multiple fruit images", async () => {
+    const mockedFetchCall = fetchFruitInformation;
+    mockedFetchCall.mockResolvedValue(sampleFruits);
+
+    render(
+      <MemoryRouter>
+        <HomePage selectFruit={jest.mock()} />
+      </MemoryRouter>
+    );
+
+    const lemon = await screen.findByRole("link", { name: /lemon lemon/i });
+    const apple = await screen.findByRole("link", { name: /apple apple/i });
+
+    expect(lemon).toBeInTheDocument();
+    expect(apple).toBeInTheDocument();
+  });
 });
