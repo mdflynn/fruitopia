@@ -38,5 +38,9 @@ describe("<FruitPage />", () => {
     expect(lemon).toBeInTheDocument();
   });
 
+  it("should have an image", () => {
+    const lemonImg = screen.getByRole("img", { name: /lemon/i });
 
+    expect(lemonImg).toBeInTheDocument();
+  });
 });
