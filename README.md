@@ -6,7 +6,7 @@
 
 An app to see different fruits and find out more information about them!
 
-Check it out on [Heroku]()!...
+Check it out on [Heroku](https://fruitopia-finder.herokuapp.com/)!
 
 ## Goals
 
