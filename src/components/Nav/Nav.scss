@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "AlloyInk";
+  src: url("../../assets/AlloyInk-nRLyO.ttf") format("truetype");
+}
+
+.nav {
+  height: 6rem;
+  text-align: center;
+  margin: auto;
+  width: 100vw;
+
+  .title {
+    font-family: "AlloyInk";
+    font-size: 65px;
+  }
+}
