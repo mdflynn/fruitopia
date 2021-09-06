@@ -39,15 +39,21 @@ describe("<FruitPage />", () => {
   });
 
   it("should have a Genus", () => {
-    const genus = screen.getByText("Genus: Malus");
+    const genus = screen.getByText('Genus: Citrus')
 
     expect(genus).toBeInTheDocument();
   });
 
   it("should have a Family", () => {
-    const family = screen.getByText("Family: Rosaceae");
+    const family = screen.getByText("Family: Rutaceae");
 
     expect(family).toBeInTheDocument();
+  });
+
+  it("should have an Order", () => {
+    const order = screen.getByText("Order: Sapindales");
+
+    expect(order).toBeInTheDocument();
   });
 
   it("should have an image", () => {
