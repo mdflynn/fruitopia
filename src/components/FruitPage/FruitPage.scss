@@ -1,17 +1,18 @@
+@import "../../variables";
+
 .fruit-section {
   width: 80%;
   margin: 50px auto;
   border: 1px solid black;
   display: flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+  box-shadow: $card-shadow;
+  border-radius: $borders;
 
   li {
     list-style: none;
     background: white;
     border-radius: 0 0.5rem 0.5rem 0.5rem;
-    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
-      0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+    box-shadow: $list-shadow;
     margin-top: 1rem;
     min-height: 3rem;
     padding: 1rem 1rem 1rem 3rem;
@@ -20,9 +21,8 @@
   img {
     object-fit: fill;
     width: 350px;
-    border-radius: 5px 5px 0 0;
-    box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05),
-      0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+    border-radius: $borders;
+    box-shadow: $list-shadow;
   }
 }
 
