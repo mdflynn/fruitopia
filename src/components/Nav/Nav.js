@@ -8,6 +8,7 @@ const Nav = () => {
     <Link className="link-style" to="/">
       <nav className="nav">
         <p className="title">Fruit🍊pia</p>
+        <div className="gradient-border"></div>
       </nav>
     </Link>
   );
