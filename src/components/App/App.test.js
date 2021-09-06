@@ -3,6 +3,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter } from "react-router";
+import userEvent from "@testing-library/user-event";
 
 import App from "./App";
 import fetchFruitInformation from "../../apiCalls";
