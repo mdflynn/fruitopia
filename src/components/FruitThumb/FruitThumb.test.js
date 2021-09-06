@@ -58,3 +58,11 @@ beforeEach(() => {
     </MemoryRouter>
   );
 });
+
+describe("<FruitThumb />", () => {
+  it("should have a Name", () => {
+    const name = screen.getByText("Lemon");
+
+    expect(name).toBeInTheDocument();
+  });
+});
