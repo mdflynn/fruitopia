@@ -32,15 +32,21 @@ beforeEach(() => {
 });
 
 describe("<FruitPage />", () => {
-  it("should render properly", () => {
-    const lemon = screen.getByText("Name: Lemon");
+  it("should have a Name", () => {
+    const name = screen.getByText("Name: Lemon");
 
-    expect(lemon).toBeInTheDocument();
+    expect(name).toBeInTheDocument();
+  });
+
+  it("should have a Genus", () => {
+    const genus = screen.getByText("Genus: Malus");
+
+    expect(genus).toBeInTheDocument();
   });
 
   it("should have an image", () => {
-    const lemonImg = screen.getByRole("img", { name: /lemon/i });
+    const image = screen.getByRole("img", { name: /lemon/i });
 
-    expect(lemonImg).toBeInTheDocument();
+    expect(image).toBeInTheDocument();
   });
 });
