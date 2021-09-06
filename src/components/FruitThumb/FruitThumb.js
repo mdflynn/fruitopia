@@ -45,13 +45,15 @@ const FruitThumb = ({ details, selectFruit }) => {
   const image = determineImage(details.name);
 
   return (
-    <Link to={`fruit/${details.id}`}>
+    <Link className="link-style" to={`fruit/${details.id}`}>
       <article
-        className="thumb-article"
+        className="card"
         onClick={() => selectFruit({ ...details, image })}
       >
         <img src={image} alt={details.name} />
-        <p>{details.name}</p>
+        <div className="container">
+          <p>{details.name}</p>
+        </div>
       </article>
     </Link>
   );
