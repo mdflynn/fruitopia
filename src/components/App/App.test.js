@@ -38,3 +38,37 @@ const sampleFruits = [
     },
   },
 ];
+
+describe("<App />", () => {
+  it("should render the title", async () => {
+    const mockedFetchCall = fetchFruitInformation;
+    mockedFetchCall.mockResolvedValue(sampleFruits);
+
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+
+    const title = screen.getByText("Fruitopia");
+
+    expect(title).toBeInTheDocument();
+  });
+
+  it("should render the fruit names", async () => {
+    const mockedFetchCall = fetchFruitInformation;
+    mockedFetchCall.mockResolvedValue(sampleFruits);
+
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>
+    );
+
+    const lemon = await screen.findByText("Lemon");
+    const apple = await screen.findByText("Apple");
+
+    expect(lemon).toBeInTheDocument();
+    expect(apple).toBeInTheDocument();
+  });
+});
