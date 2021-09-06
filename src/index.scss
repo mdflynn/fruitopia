@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: azure
+}
+
+.link-style,
+.link-style:after {
+  text-decoration: none;
+  color: black;
+}
