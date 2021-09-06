@@ -61,4 +61,20 @@ describe("<FruitPage />", () => {
 
     expect(image).toBeInTheDocument();
   });
+
+  it("should have macronutrients", () => {
+    const macros = screen.getByText('Macronutrients')
+    const carbs = screen.getByText("Carbohydrates: 9")
+    const protein = screen.getByText("Protein: 1.1")
+    const fat = screen.getByText("Fat: 0.3")
+    const calories = screen.getByText("Calories: 29")
+    const sugar = screen.getByText("Sugar: 2.5")
+
+    expect(macros).toBeInTheDocument();
+    expect(carbs).toBeInTheDocument();
+    expect(protein).toBeInTheDocument();
+    expect(fat).toBeInTheDocument();
+    expect(calories).toBeInTheDocument();
+    expect(sugar).toBeInTheDocument();
+  })
 });
