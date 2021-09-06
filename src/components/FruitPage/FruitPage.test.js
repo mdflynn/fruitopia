@@ -44,6 +44,12 @@ describe("<FruitPage />", () => {
     expect(genus).toBeInTheDocument();
   });
 
+  it("should have a Family", () => {
+    const family = screen.getByText("Family: Rosaceae");
+
+    expect(family).toBeInTheDocument();
+  });
+
   it("should have an image", () => {
     const image = screen.getByRole("img", { name: /lemon/i });
 
